@@ -1,0 +1,7 @@
+parameters:
+#    the_comet_cult_community.example.class: TheCometCult\CommunityBundle\Example
+
+services:
+#    the_comet_cult_community.example:
+#        class: %the_comet_cult_community.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
