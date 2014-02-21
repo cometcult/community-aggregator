@@ -1,0 +1,19 @@
+default:
+  context:
+    class:  TheCometCult\CommunityBundle\Features\Context\FeatureContext
+    parameters:
+      base_url: 'http://localhost'
+  filters:
+    tags: "~@wip"
+  formatter:
+    name: pretty
+  extensions:
+    Behat\MinkExtension\Extension:
+        default_session: symfony2
+        goutte: ~
+        browser_name: firefox
+    Behat\Symfony2Extension\Extension:
+        mink_driver: true
+        kernel:
+          env: test
+          debug: true

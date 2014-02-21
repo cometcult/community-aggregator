@@ -14,3 +14,7 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+# Doctrine MongoDB Configuration
+doctrine_mongodb:
+    default_database: community_aggregator_test
