@@ -1,7 +1,7 @@
 Feature: Displaying list of users
     In order to learn about community
     As a visitor
-    I want see list of users
+    I want to see list of users
 
     Background:
         Given there are community members:

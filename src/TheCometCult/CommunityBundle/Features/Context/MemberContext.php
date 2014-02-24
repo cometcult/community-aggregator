@@ -7,6 +7,8 @@ use Behat\Behat\Exception\BehaviorException;
 use Behat\Behat\Exception\PendingException;
 use Behat\Gherkin\Node\TableNode;
 
+use TheCometCult\CommunityBundle\Document\Member;
+
 /**
  * MemberContext
  */
@@ -17,16 +19,35 @@ class MemberContext extends BehatContext
      */
     public function thereAreCommunityMembers(TableNode $table)
     {
-        $memberManager = $this->getContainer()->get('the_comet_cult_community.member_manager');
-        foreach ($table->getHash() as $member) {
-            $memberManager->create(
-                $member['name'],
-                $member['age'],
-                $member['fb_id'],
-                $member['bio'],
-                $member['homeland'],
-                $member['occupancy']
-            );
+        foreach ($table->getHash() as $memberData) {
+            $member = new Member();
+            if (!empty($memberData['name'])) {
+                $member->setName($memberData['name']);
+            }
+
+            if (!empty($memberData['age'])) {
+                $member->setAge($memberData['age']);
+            }
+
+            if (!empty($memberData['fb_id'])) {
+                $member->setFbId($memberData['fb_id']);
+            }
+
+            if (!empty($memberData['bio'])) {
+                $member->setBio($memberData['bio']);
+            }
+
+            if (!empty($memberData['homeland'])) {
+                $member->setHomeland($memberData['homeland']);
+            }
+
+            if (!empty($memberData['occupancy'])) {
+                $member->setOccupancy($memberData['occupancy']);
+            }
+
+            $dm = $this->getContainer()->get('doctrine_mongodb')->getManager();
+            $dm->persist($member);
+            $dm->flush();
         }
     }
 

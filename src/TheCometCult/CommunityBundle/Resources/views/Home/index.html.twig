@@ -3,6 +3,14 @@
 {% set page_title = '' %}
 
 {% block content %}
+    <div class="new-member-form">
+        <label for="member">
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                {{ flashMessage }}
+            {% endfor %}
+        </label>
+        {{ form(form) }}
+    </div>
     <ul class="people">
         {% for member in members %}
             <li class="people__person">
