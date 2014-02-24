@@ -10,6 +10,3 @@ services:
         factory_service: doctrine_mongodb
         factory_method: getManager
         public: false
-    the_comet_cult_community.member_manager:
-        class: TheCometCult\CommunityBundle\Manager\MemberManager
-        arguments: ["@the_comet_cult_community.document_manager"]
