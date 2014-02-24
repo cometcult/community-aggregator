@@ -307,6 +307,10 @@ section.form label {
 	margin-top: 15px;
 }
 
+section.form label.error {
+	color: #FF0000;
+}
+
 section.form button {
 	border: none;
 	text-transform: none;
