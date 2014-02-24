@@ -3,20 +3,12 @@
 {% set page_title = '' %}
 
 {% block content %}
-    <div class="new-member-form">
-        <label for="member">
-            {% for flashMessage in app.session.flashbag.get('notice') %}
-                {{ flashMessage }}
-            {% endfor %}
-        </label>
-        {{ form(form) }}
-    </div>
     <ul class="people">
         {% for member in members %}
             <li class="people__person">
                 <article>
                     <figure class="image">
-                        <img src="https://graph.facebook.com/{{ member.fbId|e('html_attr') }}/picture?width=120&amp;height=120"/>
+                        <img src="https://graph.facebook.com/{{ member.fbId|e('html_attr') }}/picture?width=400&amp;height=400"/>
                     </figure>
                     <div class="description">
                         <h3>{{ member.name }}, {{ member.age }}</h3>

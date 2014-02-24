@@ -21,7 +21,8 @@
     </section>
 </div>
 <section class="form">
-    <form name="form-signup" id="form-signup" action="/" method="POST" class="wrapper">
+    {% form_theme form 'TheCometCultCommunityBundle::form.html.twig' %}
+    {{ form_start(form, {name: 'form-signup', attr: { class: 'wrapper', id: 'form-signup'}}) }}
         <fieldset class="connect-facebook">
             <div class="not-authorized">
                 <label>Step 1</label>
@@ -33,27 +34,20 @@
                 <label>Step 1</label>
                 <img src="" class="fb-avatar">
                 <p class="fb-info"><span class="fb-name"></span>, <span class="fb-age"></span></p>
-                <input type="hidden" name="fb-id" id="fb-id">
-                <input type="hidden" name="fb-age" id="fb-age">
-                <input type="hidden" name="fb-name" id="fb-name">
+                {{ form_widget(form.fbId) }}
+                {{ form_widget(form.age) }}
+                {{ form_widget(form.name) }}
             </div>
         </fieldset>
         <fieldset class="bio">
-            <label for="bio-text">Step 2</label>
-            <textarea name="bio-text" id="bio-text" rows="5" placeholder="Write a brief bio, what do you do, where do you work, etc."></textarea>
-            <span class="counter">140</span>
+            {{ form_row(form.bio, { label: 'Step 2', attr: { placeholder: 'Write a brief bio, what do you do, where do you work, etc.' } }) }}
         </fieldset>
         <fieldset class="countries">
-            <label for="country-from">Step 3</label>
-            <input type="text" id="country-from" name="country-from" placeholder="Where are you from?">
-            <input type="text" id="country-live" name="country-live" placeholder="Where do you or did you live abroad?">
+            {{ form_row(form.homeland, { label: 'Step 3', attr: { placeholder: 'Where are you from?'} }) }}
+            {{ form_row(form.occupancy, { label: '', attr: { placeholder: 'Where do you or did you live abroad?'} }) }}
         </fieldset>
         <fieldset class="add-to-list">
-            <label>Step 4</label>
-            <button class="button" disabled>
-                <span class="ss-pika ss-icon">check</span>
-                Add me to the list!
-            </button>
+            {{ form_row(form.submit, { label: 'Step 4', value: 'Add me to the list!', attr: { class: 'button' } }) }}
         </fieldset>
-    </form>
+    {{ form_end(form) }}
 </section>

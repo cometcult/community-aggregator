@@ -364,11 +364,11 @@ section.form button {
 	width: 100%;
 }
 
-.countries #country-from {
+.countries #member_homeland {
 	margin: 0;
 }
 
-.countries #country-live {
+.countries #member_occupancy {
 	margin: 15px 0;
 }
 
@@ -399,11 +399,11 @@ section.form button {
 		width: 30%;
 	}
 
-	.countries #country-from {
+	.countries #member_homeland {
 		width: auto;
 	}
 
-	.countries #country-live {
+	.countries #member_occupancy {
 		width: 100%;
 	}
 

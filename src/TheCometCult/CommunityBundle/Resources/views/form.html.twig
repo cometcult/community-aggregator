@@ -1,0 +1,20 @@
+{% block form_row %}
+    {{ form_label(form) }}
+    {{ form_widget(form) }}
+{% endblock form_row %}
+
+{% block _member_bio_widget %}
+    {{ form_widget(form) }}
+    <span class="counter">140</span>
+{% endblock %}
+
+{% block _member_occupancy_row %}
+    {{ form_widget(form) }}
+{% endblock %}
+
+{% block _member_submit_widget %}
+    {% spaceless %}
+        <label for="{{ name }}">{{ label }}</label>
+        <button type="{{ type|default('submit') }}" {{ block('button_attributes') }}><span class="ss-pika ss-icon">check</span>{{ value|trans({}, translation_domain) }}</button>
+    {% endspaceless %}
+{% endblock %}

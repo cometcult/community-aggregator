@@ -14,7 +14,7 @@ class MemberType extends AbstractType
             ->add('fbId', 'hidden')
             ->add('name', 'hidden')
             ->add('age', 'hidden')
-            ->add('bio', 'text')
+            ->add('bio', 'textarea')
             ->add('homeland', 'text')
             ->add('occupancy', 'text')
             ->add('submit', 'submit');
