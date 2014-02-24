@@ -12,13 +12,13 @@ Feature: Displaying list of users
 
     Scenario: Displaying overall number
         When I am on homepage
-        Then I should see "3" in the ".members-counter" element
+        Then I should see "3" in the ".home .description h2" element
 
     Scenario: Displaying members list
         When I am on homepage
-        Then I should see "Michal" in the ".members-list" element
-        And I should see "Karol" in the ".members-list" element
-        And I should see "Jacek" in the ".members-list" element
+        Then I should see "Michal, 13" in the ".people" element
+        And I should see "Karol, 7" in the ".people" element
+        And I should see "Jacek, 35" in the ".people" element
 
     @wip
     Scenario Outline: Displaying users's info
