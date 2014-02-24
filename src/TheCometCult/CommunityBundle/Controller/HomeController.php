@@ -12,14 +12,6 @@ class HomeController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $membersNumber = $this
-            ->get('the_comet_cult_community.member_repository')
-            ->countAll();
-
-        $members = $this->get('doctrine_mongodb')
-            ->getRepository('TheCometCultCommunityBundle:Member')
-            ->findAll();
-
         $member = new Member();
         $form = $this->createForm(new MemberType(), $member);
         $form->handleRequest($request);
@@ -33,6 +25,14 @@ class HomeController extends Controller
                 ->getFlashBag()
                 ->add('notice', sprintf('You were added'));
         }
+
+        $members = $this->get('doctrine_mongodb')
+            ->getRepository('TheCometCultCommunityBundle:Member')
+            ->findAll();
+
+        $membersNumber = $this
+            ->get('the_comet_cult_community.member_repository')
+            ->countAll();
 
         return $this->render('TheCometCultCommunityBundle:Home:index.html.twig', array(
             'members' => $members,

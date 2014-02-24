@@ -20,17 +20,15 @@ Feature: Displaying list of users
         And I should see "Karol, 7" in the ".people" element
         And I should see "Jacek, 35" in the ".people" element
 
-    @wip
     Scenario Outline: Displaying users's info
-        When I am on the homepagege
-        And I hover on <profile picture>
-        Then I can see <name>, <age>
-        And I can see <bio>
-        And I can see <country>
-        And I can see From: <living country>
+        When I am on homepage
+        Then I should see "<name>, <age>" in the ".people" element
+        And I should see "<bio>" in the ".people" element
+        And I should see "<occupancy>" in the ".people" element
+        And I should see "From: <homeland>" in the ".people" element
 
         Examples:
-        | name  | age | profile picture | bio | country  | living country |
-        | Nico  | 13  | nico.jpg        | xyz | Romania  | UK             |
-        | Karol | 7   | karol.jpg       | xxx | Romania  | Poland         |
-        | Jacek | 35  | jacek.jpg       | abc | Bulgaria | Norway         |
+        | name   | age | fb_id     | bio | homeland | occupancy |
+        | Michal | 13  | 755560893 | xyz | Romania  | UK        |
+        | Karol  | 7   | 755560892 | xxx | Romania  | Poland    |
+        | Jacek  | 35  | 755560891 | abc | Bulgaria | Norway    |

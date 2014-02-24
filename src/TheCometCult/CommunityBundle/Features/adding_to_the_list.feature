@@ -23,6 +23,7 @@ Feature: Adding to the list
         And I have filled the form
         Then "Add me to the list!" button is enabled
 
+    @wip
     Scenario: Sending the form
         Given I am on the homepage
         When I fill in "member_bio" with "test"
