@@ -1,24 +1,7 @@
-{% extends "TwigBundle::layout.html.twig" %}
-
 {% block head %}
 {% endblock %}
 
 {% block body %}
-    {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div class="flash-message">
-            <em>Notice</em>: {{ flashMessage }}
-        </div>
-    {% endfor %}
-
-    {% block content_header %}
-        <ul id="menu">
-        </ul>
-
-        <div style="clear: both"></div>
+    {% block content %}
     {% endblock %}
-
-    <div class="block">
-        {% block content %}{% endblock %}
-    </div>
-
 {% endblock %}

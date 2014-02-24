@@ -2,9 +2,10 @@
 
 {% block content %}
     <h1>Beggars, thieves & engineers!</h1>
-    <div class="members-counter">
-        {% for flashMessage in app.session.flashbag.get('members-counter') %}
-            {{ flashMessage }}
+    <div class="members-counter">{{ membersNumber }}</div>
+    <div class="members-list">
+        {% for member in members %}
+            <h2>{{ member.name }}</h2>
         {% endfor %}
     </div>
 {% endblock %}
