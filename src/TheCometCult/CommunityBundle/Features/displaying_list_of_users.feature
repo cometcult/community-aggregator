@@ -14,10 +14,12 @@ Feature: Displaying list of users
         When I am on homepage
         Then I should see "3" in the ".members-counter" element
 
-    @wip
-    Scenario: Displaying Users list
-        When I am on the homepagege
-        Then I should see a list of Users photographs
+    Scenario: Displaying members list
+        When I am on homepage
+        Then I should see "Michal" in the ".members-list" element
+        And I should see "Karol" in the ".members-list" element
+        And I should see "Jacek" in the ".members-list" element
+
     @wip
     Scenario Outline: Displaying users's info
         When I am on the homepagege

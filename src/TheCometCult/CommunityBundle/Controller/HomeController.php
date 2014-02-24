@@ -12,11 +12,13 @@ class HomeController extends Controller
             ->get('the_comet_cult_community.member_repository')
             ->countAll();
 
-        $this
-            ->get('session')
-            ->getFlashBag()
-            ->add('members-counter', $membersNumber);
+        $members = $this->get('doctrine_mongodb')
+            ->getRepository('TheCometCultCommunityBundle:Member')
+            ->findAll();
 
-        return $this->render('TheCometCultCommunityBundle:Home:index.html.twig');
+        return $this->render('TheCometCultCommunityBundle:Home:index.html.twig', array(
+            'membersNumber' => $membersNumber,
+            'members' => $members
+        ));
     }
 }
