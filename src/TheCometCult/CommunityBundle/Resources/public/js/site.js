@@ -123,6 +123,7 @@ var Site = {
         // Functions.swapTitles();
         setTimeout(function () {
             Functions.alignDescription(element);
+            Functions.checkFormValidation();
         });
         Functions.swapTitles();
         $(window).resize( function() { Functions.alignDescription(element) });
@@ -152,6 +153,10 @@ var Site = {
             e.preventDefault();
             $('section.form').addClass('visible');
         });
+
+        if ($('section.form .error').length) {
+            $('section.form').addClass('visible');
+        }
 
         $('img').unveil();
     },

@@ -256,11 +256,11 @@ section.form {
 }
 
 section.form.visible {
-	height: 540px;
+	height: 570px;
 }
 
 section.form.visible.authorized {
-	height: 640px;
+	height: 670px;
 }
 
 section.form input::-webkit-input-placeholder, section.form textarea::-webkit-input-placeholder { /* WebKit browsers */
