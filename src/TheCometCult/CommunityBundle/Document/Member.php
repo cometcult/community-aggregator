@@ -7,7 +7,7 @@ use Doctrine\Bundle\MongoDBBundle\Validator\Constraints\Unique as MongoDBUnique;
 
 /**
  * @MongoDB\Document(repositoryClass="TheCometCult\CommunityBundle\Repository\MemberRepository")
- * @MongoDBUnique(fields="fbId", message="Member already applied.")
+ * @MongoDBUnique(fields="fbId", message="Sorry, it seems you're already registered. Thanks for the support!")
  */
 class Member
 {

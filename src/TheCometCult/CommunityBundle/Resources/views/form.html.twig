@@ -17,7 +17,7 @@
         <label for="{{ name }}">{{ label }}</label>
         <button type="{{ type|default('submit') }}" {{ block('button_attributes') }}><span class="ss-pika ss-icon">check</span>{{ value|trans({}, translation_domain) }}</button>
         {% for flashMessage in app.session.flashbag.get('member-error') %}
-            <label class="error">{{ flashMessage }}</label>
+            <label for="{{ name }}" class="error">{{ flashMessage }}</label>
         {% endfor %}
     {% endspaceless %}
 {% endblock %}
