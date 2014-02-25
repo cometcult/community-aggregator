@@ -90,9 +90,9 @@ var Functions = {
         container.find('.fb-name').text(user.first_name);
         container.find('.fb-age').text(Functions.calcAge(user.birthday));
 
-        container.find('input#fb-id').val(user.id);
-        container.find('input#fb-name').val(user.first_name);
-        container.find('input#fb-age').val(Functions.calcAge(user.birthday));
+        container.find('input#member_fbId').val(user.id);
+        container.find('input#member_name').val(user.first_name);
+        container.find('input#member_age').val(Functions.calcAge(user.birthday));
 
         setTimeout(Functions.checkFormValidation);
     },
