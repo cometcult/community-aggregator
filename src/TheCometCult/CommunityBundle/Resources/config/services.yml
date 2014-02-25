@@ -1,0 +1,12 @@
+services:
+    the_comet_cult_community.member_repository:
+        class: TheCometCult\CommunityBundle\Repository\MemberRepository
+        factory_service: doctrine_mongodb
+        factory_method: getRepository
+        arguments:
+            - "TheCometCultCommunityBundle:Member"
+    the_comet_cult_community.document_manager:
+        class: Doctrine\ODM\MongoDB\DocumentManager
+        factory_service: doctrine_mongodb
+        factory_method: getManager
+        public: false

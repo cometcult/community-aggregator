@@ -1,0 +1,4 @@
+the_comet_cult_community:
+    resource: "@TheCometCultCommunityBundle/Resources/config/routing.yml"
+    prefix:   /
+

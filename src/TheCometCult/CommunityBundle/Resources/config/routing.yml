@@ -1,0 +1,7 @@
+the_comet_cult_community_homepage:
+    pattern:  /
+    defaults: { _controller: TheCometCultCommunityBundle:Home:index }
+
+the_comet_cult_community_about:
+    pattern:  /about/
+    defaults: { _controller: TheCometCultCommunityBundle:Home:about }
