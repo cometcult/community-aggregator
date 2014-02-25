@@ -12,20 +12,20 @@ Feature: Displaying list of users
 
     Scenario: Displaying overall number
         When I am on homepage
-        Then I should see "3" in the ".home .description h2" element
+        Then I should see "3" in the community counter
 
     Scenario: Displaying members list
         When I am on homepage
-        Then I should see "Michal, 13" in the ".people" element
-        And I should see "Karol, 7" in the ".people" element
-        And I should see "Jacek, 35" in the ".people" element
+        Then I should see "Michal, 13" in the people list
+        And I should see "Karol, 7" in the people list
+        And I should see "Jacek, 35" in the people list
 
     Scenario Outline: Displaying users's info
         When I am on homepage
-        Then I should see "<name>, <age>" in the ".people" element
-        And I should see "<bio>" in the ".people" element
-        And I should see "<occupancy>" in the ".people" element
-        And I should see "From: <homeland>" in the ".people" element
+        Then I should see "<name>, <age>" in the people list
+        And I should see "<bio>" in the people list
+        And I should see "<occupancy>" in the people list
+        And I should see "From: <homeland>" in the people list
 
         Examples:
         | name   | age | fb_id     | bio | homeland | occupancy |

@@ -14,6 +14,7 @@ use TheCometCult\CommunityBundle\Document\Member;
  */
 class MemberContext extends BehatContext
 {
+    protected $communityMembers = array();
     /**
      * @Given /^there are community members:$/
      */
@@ -48,6 +49,24 @@ class MemberContext extends BehatContext
             $dm = $this->getContainer()->get('doctrine_mongodb')->getManager();
             $dm->persist($member);
             $dm->flush();
+            array_push($this->communityMembers, $member);
+        }
+    }
+
+    /**
+     * @Then /^new member should not be added$/
+     */
+    public function newMemberShouldNotBeAdded()
+    {
+        $members = $this->getContainer()
+            ->get('doctrine_mongodb')
+            ->getRepository('TheCometCultCommunityBundle:Member')
+            ->findAll();
+
+        foreach ($members as $member) {
+            if (!in_array($member, $this->communityMembers)) {
+                throw new BehaviorException("New member was added");
+            }
         }
     }
 

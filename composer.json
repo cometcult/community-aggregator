@@ -59,6 +59,9 @@
         "behat/mink-extension": "*",
         "behat/mink-goutte-driver": "*",
         "phpspec/phpspec": "dev-master",
-        "polishsymfonycommunity/symfony-mocker-container": "*"
+        "polishsymfonycommunity/symfony-mocker-container": "*",
+        "behat/common-contexts": "*",
+        "kriswallsmith/buzz": "*",
+        "phpunit/phpunit": "3.7.*"
     }
 }

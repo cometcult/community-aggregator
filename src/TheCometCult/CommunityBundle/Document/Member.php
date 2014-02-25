@@ -3,9 +3,11 @@
 namespace TheCometCult\CommunityBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+use Doctrine\Bundle\MongoDBBundle\Validator\Constraints\Unique as MongoDBUnique;
 
 /**
  * @MongoDB\Document(repositoryClass="TheCometCult\CommunityBundle\Repository\MemberRepository")
+ * @MongoDBUnique(fields="fbId", message="Member already applied.")
  */
 class Member
 {
