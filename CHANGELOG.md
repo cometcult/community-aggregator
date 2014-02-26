@@ -1,3 +1,7 @@
+1.0.2
+=====
+- Fixed facebook and twitter sharer images urls to be absolute
+
 1.0.1
 =====
 - Fixed facebook and twitter sharer images urls
