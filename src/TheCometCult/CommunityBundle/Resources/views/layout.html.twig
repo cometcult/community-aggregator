@@ -11,7 +11,7 @@
 
     <link rel="icon" href="favicon.ico">
 
-    <meta property="og:image" content="{{ asset('bundles/thecometcultcommunity/images/facebook-sharer-image.jpg') }}">
+    <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset('bundles/thecometcultcommunity/images/facebook-sharer-image.jpg') }}">
     <meta property="og:title" content="Beggars, thieves, & engineers.">
     <meta property="og:site_name" content="Beggarsandco">
     <meta property="og:url" content="http://www.beggars.co/">
@@ -21,7 +21,7 @@
     <meta name="twitter:url" content="http://www.beggars.co/">
     <meta name="twitter:title" content="Beggars, thieves, & engineers.">
     <meta name="twitter:description" content="Romanian and Bulgarian citizens that impact your community in a positive way. Opportunists may call us nations of beggars and thieves, we are here to show a different side of the story.">
-    <meta name="twitter:image" content="{{ asset('bundles/thecometcultcommunity/images/twitter-sharer-image.jpg') }}">
+    <meta name="twitter:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset('bundles/thecometcultcommunity/images/twitter-sharer-image.jpg') }}">
     <meta name="twitter:creator" content="@beggarsandco">
 </head>
 <body class="home">
