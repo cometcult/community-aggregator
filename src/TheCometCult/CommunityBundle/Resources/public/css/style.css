@@ -378,10 +378,12 @@ section.form button {
 
 .add-to-list button:disabled, .add-to-list button[disabled] {
 	background-color: #b6b6b6;
+	cursor: default;
 }
 
 .add-to-list button {
 	background-color: #5fbd3e;
+	cursor: pointer;
 }
 
 @media (min-width:1024px) and (min-device-width:321px) {
