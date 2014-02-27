@@ -466,7 +466,6 @@ main .people li:nth-child(4n) article {
 		padding-bottom: 140px;
 		display: -webkit-flex;
 		-webkit-flex-flow: row wrap;
-		-webkit-justify-content: center;
 	}
 	main .people li {
 		position: relative;
