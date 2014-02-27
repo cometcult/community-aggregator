@@ -13,7 +13,7 @@ services: mongodb
 before_script:
     - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
     - echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-    - composer install --no-interaction --prefer-dist
+    - composer install --no-interaction --prefer-source
 
 script:
     - bin/behat @TheCometCultCommunityBundle

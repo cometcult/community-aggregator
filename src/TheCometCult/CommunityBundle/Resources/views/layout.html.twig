@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html dir="ltr" lang="en-US"class="no-js iem7"> <![endif]--><!--[if lt IE 7]><html dir="ltr" lang="en-US" class="no-js ie6 oldie"> <![endif]--><!--[if IE 7]><html dir="ltr" lang="en-US" class="no-js ie7 oldie"><![endif]--><!--[if IE 8]><html dir="ltr" lang="en-US" class="no-js ie8 oldie"><![endif]--><!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html dir="ltr" lang="en-US" class="no-js"><!--<![endif]-->
 <head>
-    <title>{% if page_title %} {{ page_title }} - {% endif %} Beggars, thieves and engineers!</title>
+    <title>{% if page_title %} {{ page_title }} - {% endif %} Beggars and Company! Awesome Romanians and Bulgarians</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="{{ asset('bundles/thecometcultcommunity/fonts/swedensans.css') }}">
@@ -12,19 +12,20 @@
     <link rel="icon" href="favicon.ico">
 
     <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset('bundles/thecometcultcommunity/images/facebook-sharer-image.jpg') }}">
-    <meta property="og:title" content="Beggars, thieves, & engineers.">
-    <meta property="og:site_name" content="Beggarsandco">
+    <meta property="og:title" content="Beggars and Company">
+    <meta property="og:description" content="Romanian and Bulgarian citizens that impact your community in a positive way. Opportunists may call us nations of beggars and thieves, we are here to show a different side of the story.">
+    <meta property="og:site_name" content="Beggarsdotco">
     <meta property="og:url" content="http://www.beggars.co/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://www.beggars.co/">
-    <meta name="twitter:title" content="Beggars, thieves, & engineers.">
-    <meta name="twitter:description" content="Romanian and Bulgarian citizens that impact your community in a positive way. Opportunists may call us nations of beggars and thieves, we are here to show a different side of the story.">
+    <meta name="twitter:title" content="Beggars and Company! Awesome Romanians and Bulgarians ">
+    <meta name="twitter:description" content="Awesome Romanians and Bulgarians from around the world.">
     <meta name="twitter:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset('bundles/thecometcultcommunity/images/twitter-sharer-image.jpg') }}">
-    <meta name="twitter:creator" content="@beggarsandco">
+    <meta name="twitter:creator" content="@beggarsdotco">
 </head>
-<body class="home">
+<body class="{% if page_class %}{{ page_class }}{% endif %}">
     <header>
         {% block header %}
             {% include "TheCometCultCommunityBundle::header.html.twig" %}
@@ -43,6 +44,16 @@
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{{ asset('bundles/thecometcultcommunity/js/jquery.unveil.min.js') }}"></script>
     <script src="{{ asset('bundles/thecometcultcommunity/js/site.js') }}"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ ga_tracking }}', '{{ ga_site }}');
+      ga('send', 'pageview');
+
+    </script>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -50,6 +61,6 @@
         js.src = "//connect.facebook.net/en_US/all.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>

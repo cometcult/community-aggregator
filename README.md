@@ -1,6 +1,12 @@
 Community Aggregator
 ====================
 
+Website is live
+---------------
+
+http://www.beggars.co/
+
+
 GitHub Board (HuBoard)
 ----------------------
 
