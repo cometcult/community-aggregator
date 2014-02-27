@@ -2,10 +2,7 @@
     <section class="name column">
         <h1><a href="{{ path('the_comet_cult_community_homepage') }}"><s>Beggars</s>, <s>thieves</s>, <br> &amp; <br> <span id="title">engineers</span>.</a></h1>
     </section>
-    <section class="description column">
-        <h2>{{ membersNumber }}</h2>
-        <p>Awesome Romanians and Bulgarians doing great things around the world. Want to know more? <a href="{{ path('the_comet_cult_community_about') }}">Here's the whole story behind this project</a>.</p>
-    </section>
+    {{ render(controller('TheCometCultCommunityBundle:Home:membersCounter')) }}
     <section class="join column">
         <h3>Join us!</h3>
         <p>Add your lovely face to the growing list of Bulgarians and Romanians doing cool stuff around the world.</p>
@@ -20,34 +17,4 @@
         </ul>
     </section>
 </div>
-<section class="form">
-    {% form_theme form 'TheCometCultCommunityBundle::form.html.twig' %}
-    {{ form_start(form, {name: 'form-signup', attr: { class: 'wrapper', id: 'form-signup'}}) }}
-        <fieldset class="connect-facebook">
-            <div class="not-authorized">
-                <label>Step 1</label>
-                <button class="button" type="button">
-                    <span class="ss-facebook"></span>Connect with Facebook
-                </button>
-            </div>
-            <div class="authorized" style="display: none;">
-                <label>Step 1</label>
-                <img src="" class="fb-avatar">
-                <p class="fb-info"><span class="fb-name"></span>, <span class="fb-age"></span></p>
-                {{ form_widget(form.fbId) }}
-                {{ form_widget(form.age) }}
-                {{ form_widget(form.name) }}
-            </div>
-        </fieldset>
-        <fieldset class="bio">
-            {{ form_row(form.bio, { label: 'Step 2', attr: { placeholder: 'Write a brief bio, what do you do, where do you work, etc.' } }) }}
-        </fieldset>
-        <fieldset class="countries">
-            {{ form_row(form.homeland, { label: 'Step 3', attr: { placeholder: 'Where are you from?'} }) }}
-            {{ form_row(form.occupancy, { label: '', attr: { placeholder: 'Where do you or did you live abroad?'} }) }}
-        </fieldset>
-        <fieldset class="add-to-list">
-            {{ form_row(form.submit, { label: 'Step 4', value: 'Add me to the list!', attr: { class: 'button' } }) }}
-        </fieldset>
-    {{ form_end(form) }}
-</section>
+{{ render(controller('TheCometCultCommunityBundle:Home:membershipForm')) }}
