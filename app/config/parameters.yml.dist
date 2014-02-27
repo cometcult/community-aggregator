@@ -13,3 +13,6 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    ga_tracking: UA-xxxxx-x
+    ga_site: auto
