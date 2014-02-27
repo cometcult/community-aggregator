@@ -486,8 +486,8 @@ main .people li:nth-child(4n) article {
 		display: none;
 		position: absolute;
 		width: 240px;
-		height: 200px;
-		bottom: -240px;
+		height: 240px;
+		bottom: -280px;
 		left: 0;
 		background: #00ff76;
 		z-index: 1;
