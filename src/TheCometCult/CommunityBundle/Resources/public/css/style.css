@@ -105,7 +105,7 @@ img {
 ------------------------------------------------------------------------------*/
 
 header .wrapper {
-	padding: 20px 20px 0 20px;
+	padding: 20px 20px 20px 20px;
 }
 header .column {
 	margin-bottom: 20px;
@@ -172,7 +172,7 @@ header .menu .pages {
 
 @media (min-width:768px) {
 	header .wrapper {
-		padding: 30px 40px 0 40px;
+		padding: 30px 40px 30px 40px;
 	}
 	header .name {
 		float: left;
@@ -204,7 +204,7 @@ header .menu .pages {
 }
 @media (min-width:1024px) {
 	header .wrapper {
-		padding: 50px 40px 0 40px;
+		padding: 50px 40px 50px 40px;
 	}
 	header .name {
 		margin-right: 2%;
