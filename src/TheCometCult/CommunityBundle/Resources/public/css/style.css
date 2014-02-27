@@ -125,6 +125,10 @@ header .description h2 {
 	font-family: sweden_sansbold, Arial, sans-serif;
 }
 
+header .description a {
+	text-decoration: underline;
+}
+
 header .join h3 {
 	font-size: 1.2em;
 }
