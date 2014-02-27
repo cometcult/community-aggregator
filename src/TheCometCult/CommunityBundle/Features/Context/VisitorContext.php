@@ -23,6 +23,22 @@ class VisitorContext extends MinkContext
     }
 
     /**
+     * @Then /^I should be on the about page$/
+     */
+    public function iShouldBeOnTheAboutPage()
+    {
+        $this->assertPageAddress('about/');
+    }
+
+    /**
+     * @Given /^I am on the about page$/
+     */
+    public function iAmOnTheAboutPage()
+    {
+        $this->visit('about/');
+    }
+
+    /**
      * @Then /^I should see "([^"]*)" in the community counter$/
      */
     public function iShouldSeeInTheCommunityCounter($content)

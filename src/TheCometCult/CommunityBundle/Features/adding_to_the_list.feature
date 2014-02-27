@@ -7,7 +7,7 @@ Feature: Adding to the list
         When I am on the homepage
         Then I should see "Write a brief bio, what do you do, where do you work, etc." in the form area
         Then I should see "Where are you from?" in the form area
-        Then I should see "Where do you or did you live abroad?" in the form area
+        Then I should see "Where do you live?" in the form area
         And I should see "Add me to the list!" in the form area
 
     Scenario: Sending the form

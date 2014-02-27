@@ -25,7 +25,7 @@
     <meta name="twitter:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset('bundles/thecometcultcommunity/images/twitter-sharer-image.jpg') }}">
     <meta name="twitter:creator" content="@beggarsdotco">
 </head>
-<body class="home">
+<body class="{% if page_class %}{{ page_class }}{% endif %}">
     <header>
         {% block header %}
             {% include "TheCometCultCommunityBundle::header.html.twig" %}
