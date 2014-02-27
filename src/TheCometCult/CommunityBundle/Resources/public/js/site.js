@@ -40,14 +40,20 @@ var Functions = {
         });
     },
     swapTitles: function() {
-        var titles = ['designers', 'writers', 'advertisers', 'doctors', 'lawyers', 'creatives', 'entrepreneurs', 'builders', 'artists', 'photographers', 'students', 'teachers', 'professors', 'engineers'],
-            titleSpan = $('#title');
+        var titles = ['entrepreneurs ', 'designers', 'artists ', 'journalists', 'architects', 'creatives', 'photographers', 'marketers', 'builders', 'dancers', 'DJs', 'athletes ', 'astronauts', 'paleontologist', 'plumbers', 'painters', 'art directors', 'developers', 'philosophers ', 'singers', 'politicians', 'writers', 'doctors', 'engineers', 'astrologists'];
 
-        for( var i = 0; i < titles.length; i++ ) {
-            (function(index) {
-                setTimeout(function() { titleSpan.html(titles[index]); }, 250*i);
-            })(i);
+        var titleSpan = $('#title'),
+            len = titles.length,
+            index = 0;
+
+        function swapTitle () {
+            if (index >= len) {
+                index = 0;
+            }
+            titleSpan.text(titles[index++]);
+            window.setTimeout(swapTitle, 250);
         }
+        window.setTimeout(swapTitle, 250);
     },
     updateTextareaCounter: function () {
         var l = $(this).val().length;
