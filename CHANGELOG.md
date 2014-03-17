@@ -1,3 +1,8 @@
+1.0.4
+=====
+- Fixes #52 Added optional website url field
+- Fixed #53 - Added websiteUrl
+
 1.0.3
 =====
 - Added about page fixes #14
