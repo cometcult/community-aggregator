@@ -4,8 +4,10 @@
 {% endblock form_row %}
 
 {% block _member_bio_widget %}
-    {{ form_widget(form) }}
-    <span class="counter">140</span>
+    <div style="position: relative;">
+        {{ form_widget(form) }}
+        <span class="counter">140</span>
+    </div>
 {% endblock %}
 
 {% block _member_occupancy_row %}

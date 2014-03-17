@@ -14,11 +14,11 @@
                     <div class="description">
                         <h3>{{ member.name }}, {{ member.age }}</h3>
                         <p class="job">{{ member.bio }}</p>
-                        <p>{{ member.occupancy }}</p>
-                        <p>From: {{ member.homeland }}</p>
                         {% if member.websiteUrl %}
                         <p><a href="{{ member.websiteUrl }}">{{ member.websiteUrl }}</a></p>
                         {% endif %}
+                        <p>{{ member.occupancy }}</p>
+                        <p>From: {{ member.homeland }}</p>
                     </div>
                 </article>
             </li>

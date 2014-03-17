@@ -17,7 +17,7 @@ class MemberType extends AbstractType
             ->add('bio', 'textarea')
             ->add('homeland', 'text')
             ->add('occupancy', 'text')
-            ->add('websiteUrl', 'text', array('required' => false))
+            ->add('websiteUrl', 'url', array('required' => false))
             ->add('submit', 'submit');
     }
 

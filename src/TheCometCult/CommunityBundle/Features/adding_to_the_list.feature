@@ -8,7 +8,7 @@ Feature: Adding to the list
         Then I should see "Write a brief bio, what do you do, where do you work, etc." in the form area
         Then I should see "Where are you from?" in the form area
         Then I should see "Where do you live?" in the form area
-        Then I should see "What's your website?" in the form area
+        Then I should see "Your website/twitter/facebook (optional)" in the form area
         And I should see "Add me to the list!" in the form area
 
     Scenario: Sending the form
