@@ -22,12 +22,12 @@ Copy the configuration:
 cp app/config/config.yml.dist app/config/config.yml
 ```
 
-Clone the repository and run
+Initialize Vagrant machine
 ```
 vagrant up --provision
 ```
 
-after the process is complete open vagrant
+after the process is complete open Vagrant machine
 ```
 vagrant ssh
 ```
