@@ -16,6 +16,9 @@
                         <p class="job">{{ member.bio }}</p>
                         <p>{{ member.occupancy }}</p>
                         <p>From: {{ member.homeland }}</p>
+                        {% if member.websiteUrl %}
+                        <p><a href="{{ member.websiteUrl }}">{{ member.websiteUrl }}</a></p>
+                        {% endif %}
                     </div>
                 </article>
             </li>

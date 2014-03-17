@@ -23,6 +23,7 @@
         <fieldset class="countries">
             {{ form_row(form.homeland, { label: 'Step 3', attr: { placeholder: 'Where are you from?'} }) }}
             {{ form_row(form.occupancy, { label: '', attr: { placeholder: 'Where do you live?'} }) }}
+            {{ form_widget(form.websiteUrl, { attr: { placeholder: 'What\'s your website?' } }) }}
         </fieldset>
         <fieldset class="add-to-list">
             {{ form_row(form.submit, { label: 'Step 4', value: 'Add me to the list!', attr: { class: 'button' } }) }}
