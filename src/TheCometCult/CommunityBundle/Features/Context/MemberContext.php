@@ -46,6 +46,10 @@ class MemberContext extends BehatContext
                 $member->setOccupancy($memberData['occupancy']);
             }
 
+            if (!empty($memberData['website_url'])) {
+                $member->setWebsiteUrl($memberData['website_url']);
+            }
+
             $dm = $this->getContainer()->get('doctrine_mongodb')->getManager();
             $dm->persist($member);
             $dm->flush();

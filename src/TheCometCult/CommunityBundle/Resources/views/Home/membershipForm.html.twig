@@ -19,6 +19,7 @@
         </fieldset>
         <fieldset class="bio">
             {{ form_row(form.bio, { label: 'Step 2', attr: { placeholder: 'Write a brief bio, what do you do, where do you work, etc.' } }) }}
+            {{ form_widget(form.websiteUrl, { attr: { placeholder: 'Your website/twitter/facebook (optional)' } }) }}
         </fieldset>
         <fieldset class="countries">
             {{ form_row(form.homeland, { label: 'Step 3', attr: { placeholder: 'Where are you from?'} }) }}

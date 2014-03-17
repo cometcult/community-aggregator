@@ -47,6 +47,11 @@ class Member
     protected $occupancy;
 
     /**
+     * @MongoDB\String
+     */
+    protected $websiteUrl;
+
+    /**
      * @return id $id
      */
     public function getId()
@@ -148,5 +153,21 @@ class Member
     public function getOccupancy()
     {
         return $this->occupancy;
+    }
+
+    /**
+     * @param string $websiteUrl
+     */
+    public function setWebsiteUrl($websiteUrl)
+    {
+        $this->websiteUrl = $websiteUrl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getWebsiteUrl()
+    {
+        return $this->websiteUrl;
     }
 }
