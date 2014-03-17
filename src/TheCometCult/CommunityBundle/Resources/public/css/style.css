@@ -260,11 +260,11 @@ section.form {
 }
 
 section.form.visible {
-    height: 600px;
+    height: 613px;
 }
 
 section.form.visible.authorized {
-    height: 670px;
+    height: 683px;
 }
 
 section.form input::-webkit-input-placeholder, section.form textarea::-webkit-input-placeholder { /* WebKit browsers */
@@ -367,7 +367,7 @@ section.form button {
     pointer-events: none;
 }
 
-.countries input {
+.countries input, .bio input {
     border: 1px solid black;
     width: 100%;
 }
@@ -418,7 +418,7 @@ section.form button {
     }
 
     section.form.visible, section.form.visible.authorized {
-        height: 272px;
+        height: 320px;
     }
 }
 
