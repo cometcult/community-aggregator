@@ -13,6 +13,7 @@ services: mongodb
 before_script:
     - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
     - echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+    - cp app/config/config.yml.dist app/config/config.yml
     - composer install --no-interaction --prefer-source
 
 script:

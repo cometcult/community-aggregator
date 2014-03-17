@@ -16,6 +16,12 @@ https://tcc-github-board.herokuapp.com/cometcult/community-aggregator
 Installation instruction
 ------------------------
 
+Copy the configuration:
+
+```
+cp app/config/config.yml.dist app/config/config.yml
+```
+
 Clone the repository and run
 ```
 vagrant up --provision
