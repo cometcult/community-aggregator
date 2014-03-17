@@ -75,7 +75,7 @@ var Functions = {
         if (!FB_user) {
             return false;
         }
-        var inputs = $('section.form input, section.form textarea');
+        var inputs = $('section.form input[required="required"], section.form textarea[required="required"]');
         var textarea = $('section.form textarea');
         if (textarea.val() > 140) {
             return false;
