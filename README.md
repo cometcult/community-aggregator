@@ -37,6 +37,12 @@ and run
 composer install
 ```
 
+Install assets:
+
+```
+php app/console assets:install web --symlink
+```
+
 Next step is to add a working address to your /etc/hosts:
 Edit `/etc/hosts` file and add the following line:
 ```
