@@ -17,6 +17,12 @@ Feature: Adding to the list
         And press submit
         Then I should see "test" in the people list
 
+    Scenario: Sending incomplete form
+        Given I am on the homepage
+        When I fill in "member_bio" with "Something about me"
+        And press submit
+        Then I should see "Please connect with Facebook account"
+
     @wip
     Scenario: Trying to register user already in the list
         Given I am on the homepage

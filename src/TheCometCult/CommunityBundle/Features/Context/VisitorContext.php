@@ -56,6 +56,9 @@ class VisitorContext extends MinkContext
      */
     public function iFillMemberForm()
     {
+        $this->getSession()->getPage()->findById('member_fbId')->setValue('test');
+        $this->getSession()->getPage()->findById('member_name')->setValue('test');
+        $this->getSession()->getPage()->findById('member_age')->setValue('10');
         $this->fillField('member_bio', 'test');
         $this->fillField('member_homeland', 'test');
         $this->fillField('member_occupancy', 'test');

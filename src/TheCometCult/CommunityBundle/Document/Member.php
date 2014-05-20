@@ -4,6 +4,7 @@ namespace TheCometCult\CommunityBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use Doctrine\Bundle\MongoDBBundle\Validator\Constraints\Unique as MongoDBUnique;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @MongoDB\Document(repositoryClass="TheCometCult\CommunityBundle\Repository\MemberRepository")
@@ -18,31 +19,37 @@ class Member
 
     /**
      * @MongoDB\String
+     * @Assert\NotBlank(message="Please supply a name")
      */
     protected $name;
 
     /**
      * @MongoDB\Int
+     * @Assert\NotBlank(message="Please supply your age")
      */
     protected $age;
 
     /**
      * @MongoDB\String
+     * @Assert\NotBlank(message="Please connect with Facebook account")
      */
     protected $fbId;
 
     /**
      * @MongoDB\String
+     * @Assert\NotBlank(message="Please supply a short bio")
      */
     protected $bio;
 
     /**
      * @MongoDB\String
+     * @Assert\NotBlank(message="Please supply your homeland")
      */
     protected $homeland;
 
     /**
      * @MongoDB\String
+     * @Assert\NotBlank(message="Please supply your occupancy")
      */
     protected $occupancy;
 
