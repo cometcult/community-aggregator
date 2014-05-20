@@ -1,3 +1,7 @@
+1.0.5
+=====
+- Fixed form fields validation
+
 1.0.4
 =====
 - Fixes #52 Added optional website url field

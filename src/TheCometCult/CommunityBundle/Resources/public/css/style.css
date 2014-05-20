@@ -440,6 +440,12 @@ main .people .description {
     float: right;
     padding: 20px 2%;
 }
+
+.people .bottom .description p { 
+    overflow:hidden; 
+    text-overflow: ellipsis; 
+}
+
 main .people .description p.job {
     margin: 10px 0;
     font-weight: normal;
